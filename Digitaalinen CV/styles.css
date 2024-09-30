@@ -1,68 +1,237 @@
-/* Perustyyli kaikille laitteille */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+
+/* Navigointipalkki */
+    /* Tausta */
+    .sidenav {
+        height: 100%;
+        width: 300px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #021D32;
+        overflow-x: hidden;
+        padding-top: 20px;
+        box-shadow: 0 20px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Teksti */
+    .sidenav a {
+        padding: 8px 8px 8px 16px;
+        text-decoration: none;
+        font-size: 18px;
+        color: #f8f0ee;
+        display: block;
+    }
+
+    /* Teksti hoveratessa */ 
+    .sidenav a:hover {
+        color: #81b4cf;
+    }
+
+    /* Siirtää kaiken oikealle navigointipalkin alta (eli sivuvalikon leveys) */
+    .main {
+         margin-left: 300px;
+        padding: 20px;
+      }
+
+/* Profiili */
+    /* Taustalaatikko */
+    header {
+        background-color: #021D32;
+        color: #f8f0ee;
+        padding: 20px; /* Tilaa sisällön ympärille */
+        margin: 20px auto; /* Keskittää taustalaatikon sivun keskelle */
+        border-radius: 5px;
+        box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center; /* Keskittää sisällön vaakasuunnassa */
+        align-items: center; /* Keskittää sisällön pystysuunnassa */
+        width: 500px; /* Määrittää laatikon koon sisällön mukaan */
+        flex-direction: column; /* Asettaa kuvan ja tekstin päällekkäin */
+    }
+    
+    /* Profiilikuva */
+    .profiilikuva {
+        width: 400px;
+        height: 550px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+    }
+    
+    /* Etu -ja sukunimi */
+    .info h1 {
+        color: #f8f0ee;
+        margin: 0;
+        font-size: 32px;
+        text-align: center;
+    }
+    /* Yhteystiedot */
+    .info p {
+        color: #f8f0ee;
+        margin: 5px 0;
+        text-align: left;
+    }
+
+/* Tausta */
+    /* Taustakuva */
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url('tausta.jpg');
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+        background-attachment: fixed; 
+    }
+
+    /* Taustalaatikot */
+    section {
+        background-color: #eeecece7;
+        margin: 20px 0;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
+/* Nappi */
+    /* Nappilogistiikat ja ulkoasu */
+    #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        border: none;
+        outline: none;
+        background-color: #021D32;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 10px;
+        font-size: 18px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    /* Nappi hoveratessa */
+    #myBtn:hover {
+        background-color: #555;
+        transform: scale(1.1);
+    }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-}
+/* Tietoa minusta */
+    /* Otsikko */
+    .minusta h2 {
+        margin-top: 3px;
+        margin-bottom: 0;
+        padding-bottom: 10px;
+    }
 
-.profile-pic {
-    width: 100px;
-    height: 100px;
+    /* Teksti */
+    .minusta p {
+        margin-top: 0.5px;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+/* Työ ja koulutus */
+    /* Asettaa laatikot vierekkäin */
+    .tyo-koulu {
+        display: flex; 
+        justify-content: space-between; 
+        gap: 20px; 
+        margin: 20px 0;
+    }
+
+    /* Laatikoiden tausta */
+    #kokemus, #koulutus {
+        flex: 1; /* Antaa molemmille osioille saman verran tilaa */
+        padding: 20px;
+        background-color: #eeecece7;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+    }
+
+    /* Työkokemus */
+        /* Otsikko */
+        .kokemus h2 {
+            margin-top: 3px;
+            margin-bottom: 0;
+            padding-bottom: 10px;
+        }
+
+        /* Nimike */
+        .kokemus h3 {
+            margin-top: 0.5px;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        /* Yritys ja aikaväli */
+        .kokemus p {
+            margin-top: 0.5px;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        /* Työnkuvaus */
+        .kokemus ul {
+            margin-top: 0.5px;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+    /* Koulutus */
+
+
+/* Taidot */
+    /* Jakaa sarakkeisiin + fontti */
+    .taito-luokka {
+        display: flex;
+        flex-wrap: wrap; 
+        gap: 20px; 
+        margin: 20px 0;
+    }
+
+    /* Sarakkeiden laatikot */
+    .sarake {
+        flex: 1 1 300px; 
+        padding: 20px;
+        background-color: #f4f4f4;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+/* Suosittelijat */
+    /* Jakaa henkilökortteihin + fontti */
+    .suosittelijat-luokka {
+        display: flex; 
+        justify-content: space-between; 
+        gap: 20px; 
+        margin: 20px 0;
+    }
+    
+    /* Henkilökorttien laatikot */
+    .suosittelija {
+        flex: 1; 
+        padding: 20px;
+        background-color: #99b7c7be;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+    }
+
+    /* Suosittelijoiden kuvat keskitettynä */
+    .jani_virtanen, .anna_lehtonen, .pekka_niemi {
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
-    margin-right: 20px;
-}
+    display: block;
+    margin: 0 auto 10px;
+    object-fit: cover;
+    }
 
-.info h1 {
-    margin: 0;
-    font-size: 32px;
-}
-
-.info p {
-    margin: 5px 0;
-}
-
-.navbar {
-    background-color: #444;
-    padding: 10px;
-}
-
-.navbar ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.navbar ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-.navbar ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-section {
-    background-color: #fff;
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
+/* Footeri */
 footer {
     text-align: center;
     background-color: #333;
@@ -70,32 +239,24 @@ footer {
     padding: 10px;
 }
 
-/* Mobiilioptimointi */
+/* Mobiiliin skaalautuminen */
 @media (max-width: 768px) {
-    .container {
-        width: 95%;
+    .sidenav {
+        width: 100px;
     }
 
-    header {
-        flex-direction: column;
-        text-align: center;
+    .main {
+        margin-left: 100px;
     }
 
-    .profile-pic {
-        margin: 0 auto 20px auto;
+
+    .profiilikuva {
+        width: 80px;
+        height: 80px;
     }
 
-    .navbar ul {
-        text-align: center;
-    }
-
-    .navbar ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    h1 {
-        font-size: 28px;
+    .info h1 {
+        font-size: 24px;
     }
 
     section {
